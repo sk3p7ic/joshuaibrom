@@ -1,6 +1,8 @@
-<div class="main-app-container" [ngClass]="currentTheme">
+<div class="main-app-container" [ngClass]="_currentTheme">
   {{ currentPageIndex }}
   <app-navbar (onIndexChange)="setCurrentPageIndex($event)"></app-navbar>
-  <app-theme-switcher></app-theme-switcher>
+  <app-theme-switcher
+    (onSwitchTheme)="setCurrentTheme($event)"
+  ></app-theme-switcher>
 </div>
 <router-outlet></router-outlet>

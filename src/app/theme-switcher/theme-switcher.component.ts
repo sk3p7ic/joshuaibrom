@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 type ThemeDef = { name: string; classname: string };
 
@@ -12,7 +12,9 @@ export class ThemeSwitcherComponent implements OnInit {
     { name: 'Default', classname: '' },
     { name: 'Synthwave', classname: 'theme-synthwave' },
   ];
+  _currentThemeIndex = 0;
   _showThemes: boolean = false;
+  @Output() onSwitchTheme = new EventEmitter<string>();
 
   constructor() {}
 
@@ -24,5 +26,10 @@ export class ThemeSwitcherComponent implements OnInit {
 
   _getThemeTextVisibilityProperty(): string {
     return this._showThemes == true ? 'visible' : 'hidden';
+  }
+
+  _setSelectedTheme(index: number): void {
+    this._currentThemeIndex = index;
+    this.onSwitchTheme.emit(this._themes[this._currentThemeIndex].classname);
   }
 }

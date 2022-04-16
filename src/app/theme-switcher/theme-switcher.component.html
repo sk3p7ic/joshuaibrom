@@ -1,5 +1,11 @@
 <div id="theme-switcher-themes" [ngClass]="{ collapsed: !_showThemes }">
-  <p *ngFor="let theme of _themes; index as i">{{ theme.name }}</p>
+  <p
+    *ngFor="let theme of _themes; index as i"
+    [ngClass]="{ 'selected-theme': i == _currentThemeIndex }"
+    (click)="_setSelectedTheme(i)"
+  >
+    {{ theme.name }}
+  </p>
 </div>
 <div id="theme-switcher-btn">
   <button mat-fab (click)="_toggleShowThemes()">

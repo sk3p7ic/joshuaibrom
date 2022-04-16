@@ -22,10 +22,20 @@
   margin: 1vh 0vh;
   font-family: "Nunito", sans-serif;
   font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.selected-theme {
+  font-weight: bold;
+  color: var(--accent-color);
 }
 
 #theme-switcher-btn {
   position: absolute;
   right: 2vh;
   bottom: 2vh;
+}
+
+#theme-switcher-btn button {
+  background-color: var(--accent-color);
 }

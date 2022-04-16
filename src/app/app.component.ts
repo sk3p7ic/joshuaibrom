@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   title = 'personal-site';
-  currentTheme = 'theme-synthwave';
+  _currentTheme = '';
   currentPageIndex: number = 0;
 
   ngOnInit() {
@@ -16,5 +16,9 @@ export class AppComponent implements OnInit {
 
   setCurrentPageIndex(newIndex: number): void {
     this.currentPageIndex = newIndex;
+  }
+
+  setCurrentTheme(newTheme: string): void {
+    this._currentTheme = newTheme;
   }
 }
