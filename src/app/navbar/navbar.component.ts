@@ -45,6 +45,9 @@ export class NavbarComponent implements OnInit {
   }
 
   calculateBarOffset(): number {
-    return 36.5 + 9 * this.selectedIndex;
+    // Calculate base position
+    const base_position = 54.5 - (9 * this.linkTitles.length) / 2;
+    // Return the current position based on the index
+    return base_position + 9 * this.selectedIndex;
   }
 }
