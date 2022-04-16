@@ -1,3 +1,10 @@
+export {
+  JobListing,
+  JobResponsibility,
+  JobResponsibilityType,
+  jobHistory as JOB_HISTORY,
+};
+
 class JobListing {
   constructor(
     employer: string,
@@ -99,10 +106,3 @@ const jobHistory: JobListing[] = [
     ],
   },
 ];
-
-export {
-  JobListing,
-  JobResponsibility,
-  JobResponsibilityType,
-  jobHistory as JOB_HISTORY,
-};
