@@ -8,8 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   title = 'personal-site';
   currentTheme = 'theme-synthwave';
+  currentPageIndex: number = 0;
 
   ngOnInit() {
     // Code
+  }
+
+  setCurrentPageIndex(newIndex: number): void {
+    this.currentPageIndex = newIndex;
   }
 }

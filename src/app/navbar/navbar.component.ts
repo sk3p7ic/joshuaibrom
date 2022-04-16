@@ -1,4 +1,10 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  HostListener,
+  OnInit,
+  Output,
+} from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 
 type LinkTitle = { text: string; icon: string };
@@ -18,6 +24,7 @@ export class NavbarComponent implements OnInit {
     { text: 'contact', icon: 'contact_page' },
   ];
   selectedIndex: number = 0;
+  @Output() onIndexChange = new EventEmitter<number>();
 
   constructor() {}
 
@@ -34,7 +41,7 @@ export class NavbarComponent implements OnInit {
 
   setSelectedIndex(newIndex: number): void {
     this.selectedIndex = newIndex;
-    console.log(this.selectedIndex);
+    this.onIndexChange.emit(this.selectedIndex);
   }
 
   calculateBarOffset(): number {
