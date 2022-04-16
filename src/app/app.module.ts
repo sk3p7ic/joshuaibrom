@@ -8,9 +8,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { ThemeSwitcherComponent } from './theme-switcher/theme-switcher.component';
+import { HomePageComponent } from './home-page/home-page.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, ThemeSwitcherComponent],
+  declarations: [AppComponent, NavbarComponent, ThemeSwitcherComponent, HomePageComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
