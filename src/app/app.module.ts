@@ -9,9 +9,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { ThemeSwitcherComponent } from './theme-switcher/theme-switcher.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { AboutPageComponent } from './about-page/about-page.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, ThemeSwitcherComponent, HomePageComponent],
+  declarations: [AppComponent, NavbarComponent, ThemeSwitcherComponent, HomePageComponent, AboutPageComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
