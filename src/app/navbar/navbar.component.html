@@ -1,0 +1,13 @@
+<div id="navbar-container">
+  <div class="navbar">
+    <div class="nav-item" *ngFor="let navItem of linkTitles">
+      <a *ngIf="iconify; then navTextDisplay; else navIconDisplay"></a>
+      <ng-template #navIconDisplay>
+        <mat-icon aria-hidden="false" aria-label="navItem.text">
+          {{ navItem.icon }}
+        </mat-icon>
+      </ng-template>
+      <ng-template #navTextDisplay> {{ navItem.text }} </ng-template>
+    </div>
+  </div>
+</div>

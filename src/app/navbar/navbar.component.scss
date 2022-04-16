@@ -1,0 +1,28 @@
+@import "../app.component.scss";
+
+#navbar-container {
+  position: fixed;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--contrast-color);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.nav-item {
+  flex: 1 1 0px;
+  color: var(--gray-color);
+  font-size: 2rem;
+}
