@@ -1,7 +1,7 @@
 <div class="main-app-container" [ngClass]="_currentTheme">
   <div id="pages">
-    <app-home-page></app-home-page>
-    <app-about-page></app-about-page>
+    <app-home-page [leftValue]="_pagePositions[0].left"></app-home-page>
+    <app-about-page [leftValue]="_pagePositions[1].left"></app-about-page>
   </div>
   <app-navbar (onIndexChange)="setCurrentPageIndex($event)"></app-navbar>
   <app-theme-switcher
