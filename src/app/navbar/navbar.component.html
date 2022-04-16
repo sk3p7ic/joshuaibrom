@@ -1,7 +1,12 @@
 <div id="navbar-container">
   <div class="navbar">
-    <div class="nav-item" *ngFor="let navItem of linkTitles">
-      <a *ngIf="iconify; then navTextDisplay; else navIconDisplay"></a>
+    <div
+      class="nav-item"
+      *ngFor="let navItem of linkTitles; index as i"
+      [ngClass]="{ 'nav-selected': selectedIndex === i }"
+      (click)="setSelectedIndex(i)"
+    >
+      <p *ngIf="iconify; then navTextDisplay; else navIconDisplay"></p>
       <ng-template #navIconDisplay>
         <mat-icon aria-hidden="false" aria-label="navItem.text">
           {{ navItem.icon }}
@@ -11,3 +16,7 @@
     </div>
   </div>
 </div>
+<div
+  class="nav-selected-bar"
+  [ngStyle]="{ 'left.vw': calculateBarOffset() }"
+></div>

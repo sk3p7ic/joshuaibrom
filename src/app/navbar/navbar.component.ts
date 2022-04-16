@@ -17,6 +17,7 @@ export class NavbarComponent implements OnInit {
     { text: 'projects', icon: 'code' },
     { text: 'contact', icon: 'contact_page' },
   ];
+  selectedIndex: number = 0;
 
   constructor() {}
 
@@ -29,5 +30,14 @@ export class NavbarComponent implements OnInit {
   onResize(event: any): void {
     this.width = window.innerWidth;
     this.iconify = this.width >= 800;
+  }
+
+  setSelectedIndex(newIndex: number): void {
+    this.selectedIndex = newIndex;
+    console.log(this.selectedIndex);
+  }
+
+  calculateBarOffset(): number {
+    return 36.5 + 9 * this.selectedIndex;
   }
 }
