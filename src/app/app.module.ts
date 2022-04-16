@@ -10,9 +10,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { ThemeSwitcherComponent } from './theme-switcher/theme-switcher.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { AboutPageComponent } from './about-page/about-page.component';
+import { ProjectsPageComponent } from './projects-page/projects-page.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, ThemeSwitcherComponent, HomePageComponent, AboutPageComponent],
+  declarations: [AppComponent, NavbarComponent, ThemeSwitcherComponent, HomePageComponent, AboutPageComponent, ProjectsPageComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -14,6 +14,8 @@ export class AppComponent implements OnInit {
   _pagePositions: PagePositionAssistant[] = [
     { index: 0, initLeft: 0, left: 0 },
     { index: 1, initLeft: 100, left: 100 },
+    { index: 2, initLeft: 200, left: 200 },
+    { index: 3, initLeft: 300, left: 300 },
   ];
 
   ngOnInit() {

@@ -2,6 +2,7 @@
   <div id="pages">
     <app-home-page [leftValue]="_pagePositions[0].left"></app-home-page>
     <app-about-page [leftValue]="_pagePositions[1].left"></app-about-page>
+    <app-projects-page [leftValue]="_pagePositions[2].left"></app-projects-page>
   </div>
   <app-navbar (onIndexChange)="setCurrentPageIndex($event)"></app-navbar>
   <app-theme-switcher
